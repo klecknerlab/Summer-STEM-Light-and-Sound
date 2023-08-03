@@ -1,0 +1,236 @@
+\documentclass[12pt, letterpaper]{article}
+\input{../preamble.tex}
+
+% \usepackage{nth}
+% \usepackage{xcolor}
+% \usepackage{hyperref}
+% \usepackage[letterpaper,margin=1in]{geometry}
+% \usepackage{amsmath}
+% \usepackage[parfill]{parskip}
+%
+% \hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+%
+% \newcommand{\email}[1]{\href{mailto:#1}{#1}}
+% \newcommand{\U}[1]{\textrm{ #1}}
+% % \vspace{1\baselineskip}
+
+\begin{document}
+\header{Day 2 Worksheet: Scientific Notation and SI Units}
+
+How do we deal with very big numbers, such as the speed of light?
+Consider, for example, the distance from the earth to the sun, which is around 150,000,000,000 m (meters).
+If we forget even one of the zeros there we get an answer that is off by a factor of 10 -- in physical terms this is a big deal!
+
+There are better ways to deal with things like this than to write them out explicitly.
+Today we we learn about two: scientific notation and `SI' prefixes.
+
+\section{Scientific Notation}
+In scientific notation we basically just count the number of digits and express this as a power of ten.
+For example:
+\begin{align}
+	250 &= 25 \times 10\\
+	&= 2.5 \times 10 \times 10\\
+	&= 2.5 \times 10^2\\
+	\Rightarrow 150,000,000,000 &= 150,000,000 \times 10^3\\
+	&= 150,000 \times 10^6 \\
+	&= 150 \times 10^9 \\
+	&= 1.5 \times 10^{11}
+\end{align}
+If this is too confusing, I recommend this YouTube video:\\ \href{https://www.youtube.com/watch?v=ZtB0vJMGve4}{www.youtube.com/watch?v=ZtB0vJMGve4}
+
+Note that many calculators and programming languages also let you write scientific numbers using the `E' notation: in this case we would be able to write: 150000000000 = `1.5E11', which is equivalent to the above.
+In the iPad (or iPhone) calculator app, you can enter scientific notation with the `EE' button, but unfortunately you can't force it to write your answer that way, although it will do so if the number is very large or very small.
+(On the iPhone you have to turn your phone horizontal to see all the extra buttons!)
+Give it a try and make sure you understand what it does!
+
+Scientific notation can also be used to express very small numbers, using negative powers.
+For example:
+\begin{align}
+	0.0025 &= 2.5 / 10 / 10 / 10\\
+	&= 2.5 / 10^3\\
+	&= 2.5 \times 10^{-3}
+\end{align}
+Really, the way to think about this is that the exponent just tells you how many times to shift the decimal place:
+\begin{align} 
+	2.5 &= 2500 \times 10^{-3}\\
+	2.5 &= 250 \times 10^{-2}\\ 
+	2.5 &= 25 \times 10^{-1}\\ 
+	2.5 &= 2.5 \times 10^0\\
+	2.5 &= 0.25 \times 10^1\\ 
+	2.5 &= 0.025 \times 10^2\\ 
+	2.5 &= 0.0025 \times 10^3
+\end{align}
+Now, of course we would usually only use the center form, but they are all equivalent.
+As a result, there is a convention: you try to keep the number in front between 1 and 10, as I have done in the examples above.
+
+Multiplying and dividing numbers in scientific notation is also easy if you know how exponents work.
+In general, the rule is:
+\begin{align}
+	(x \times 10^a) \cdot (y \times 10^b) &= (x \cdot y) \times 10^{a + b}\\
+	(x \times 10^a) / (y \times 10^b) &= (x / y) \times 10^{a - b}\\
+	(x \times 10^a)^n &= x^n \times 10^{n \cdot a}
+\end{align}
+Or... by example:
+\begin{align}
+	(7 \times 10^{15}) \cdot (3 \times 10^{-12}) &= 21 \times 10^3\\
+	&= 2.1 \times 10^4\\
+	(7 \times 10^{15}) / (3 \times 10^{-12}) &= 2.33 \times 10^{27}
+\end{align}
+Note a couple things: when I did the multiplication in the first case the number in front was more than 10, so I had to shift the power an additional time.
+In the second case, I subtracted a negative number in the division, which makes the exponent \emph{larger}. 
+(In other words, dividing by a really small number makes a really large number!
+
+By the way: you can use scientific notation with units, and nothing really changes.  For example:
+\begin{align}
+150,000,000,000 \U{m} &= 1.5 \times 10^{11} \U m 
+\end{align}
+
+\clearpage
+\textbf{Exercises:}
+
+\begin{enumerate}
+% \item Write the speed of light (approximately 300,000,000 m/s) in scientific notation.
+% \answergrid{5cm}
+\item Write 500 ns in terms of s, using scientific notation.
+
+\answergrid{5cm}
+\item Write $503 \cdot (1.7 \times 10^{7})$ in terms of scientific notation.
+
+\answergrid{5cm}
+\item Write $(3.4 \times 10^{-7}) / (1.2 \times 10^{3})$ in terms of scientific notation.
+
+\answergrid{5cm}
+\item Write $(3.4 \times 10^{7}) + (1.2 \times 10^{6})$ in terms of scientific notation.  (I didn't tell you how to add large numbers; I think you can figure it out but if not ask for help!)
+
+\answergrid{5cm}
+\item According to Google, there are about `100 thousand million stars' in our galaxy, the Milky way.  Write this in scientific notation.
+
+\answergrid{5cm}
+\end{enumerate}
+
+\section{SI Prefixes}
+`SI' -- or the `International System of Units' -- is just the metric system (think meters, grams, etc.), with some extra bits added on to deal with very small or large numbers.
+You have surely already seen some aspects of it, for example:
+\begin{align}
+	5 \U{kg} &= 5000 \U{g} = 5 \times 10^3 \U{g}\\
+	5 \U{mm} &= 0.005 \U{m} = 5 \times 10^{-3} \U{m}
+\end{align}
+In other words, the `k' in front of the unit means $10^3$, and the `m' in front means $10^{-3}$.
+These can be used with any type of unit, so we also have 5 mg = 5$\times10^{-3}$ g and 5 km = 5$\times10^{3}$ m.
+
+These things out front are called `prefixes', and there are actually a whole lot of them:
+
+\begin{centering}
+	
+\begin{tabular}{ccc}
+Name & Symbol & Meaning\\
+\hline
+yotta & Y & $10^{24}$\\
+zetta & Z & $10^{21}$\\
+exa & E & $10^{18}$\\
+peta & P & $10^{15}$\\
+tera & T & $10^{12}$\\
+giga & G & $10^{9}$\\
+mega & M & $10^{6}$\\
+kilo & k & $10^{3}$\\
+\hline
+milli & m & $10^{-3}$\\
+micro & $\mu^*$& $10^{-6}$\\
+nano & n & $10^{-9}$\\
+pico & p & $10^{-12}$\\
+femto & f & $10^{-15}$\\
+atto & a & $10^{-18}$\\
+zepto & z & $10^{-21}$\\
+yocto & y & $10^{-24}$\\
+\end{tabular}
+
+$^*$ Often people type the micro symbol as `u', since they look similar!
+
+\end{centering}
+
+
+
+\textbf{Note: be careful about capitalization!  1 mm and 1 Mm are very different things!}
+
+There are also a few other ones like `centi' $=10^{-2}$ (e.g.~100 cm = 1 m), but I've stuck to the ones that are powers of 1000, which are by far the most commonly used.
+
+Generally, we try to pick SI prefixes to make our number between 1 and 1000, but this isn't as strict as it is with scientific notation.
+For example, half a meter might be expressed either as `0.5 m' or `500 mm', but you probably wouldn't want to write `0.0005 km' or `500,000,000 nm', even though this express the same thing.
+(After all: the point is to get rid of all those digits, so you don't make mistakes!)
+
+
+
+\textbf{Exercises:}
+
+\begin{enumerate}
+\item Write $5 \times 10^{10}$ m using SI prefixes.  (Keep the number in front between 1 and 1000!)
+
+\answergrid{4.5cm}
+\item Write $7 \times 10^{-8}$ s using SI prefixes.  (Keep the number in front between 1 and 1000!)
+	
+\answergrid{4.5cm}
+\item What is 1 year in seconds?  Express this both in scientific notation and with SI prefixes (i.e.~using ks, Ms, Gs, or whatever prefix makes the most sense).
+
+\answergrid{4.5cm}
+
+\item Write 1 ft/ns in terms of (1) scientific notation, and (2) m/$\mu$s.
+
+\answergrid{4.5cm}
+% \item As mentioned above, the distance to the sun is 150,000,000,000 m.  What is this in terms of SI prefixes?
+%
+% \answergrid{4.5cm}
+%
+% \item Light travels at a speed of about 1 ft / ns (foot per nanosecond).  Write this in terms of scientific notation.
+%
+% \fillanswergrid
+%
+% \item How long does it take light to get from the sun to the earth?  (Express in whatever way is convenient!)
+%
+% \answergrid{4.5cm}
+%
+% \item A light year is the distance light travels in one year.  Write this in terms of scientific notation and SI prefixes.
+
+% \answergrid{4.5cm}
+
+% \item A typical power plant produces around 1 GW of power.  How many Joules of energy (1 J = 1 W $\times$ 1 s) does a power plant produce in 1 year?  Write this in terms of both scientific and SI notation.
+%
+% \fillanswergrid
+\end{enumerate}
+
+\subsection{Bonus problems (harder, optional!)}
+\textbf{Note: these will require you to look up things on your own -- Google is your friend here!}
+
+\begin{enumerate}
+\item Find the mass of our sun online.  Now, assuming the other suns in our galaxy have roughly the same mass, what is the total mass of the stars in our Galaxy?  Would it be better to use SI or scientific notation for this?
+
+(BTW: about 85 \% of the \emph{mass} in our Galaxy is actually `dark matter', not the `regular' atoms stars are made of, so your estimate is much lower than the true mass of the Galaxy!) 
+
+\answergrid{7cm}
+
+\item Most of the atoms in stars (over 90\%) are hydrogen.  Using this (and looking up the mass of a hydrogen atom), estimate how many hydrogen atoms there are in our sun and in the Galaxy.
+
+\fillanswergrid
+
+% \item According to Einstein, if we convert mass directly to energy, the amount is given by $E = mc^2$, where $E$ is expressed in Joules, $m$ in kg, and $c$ is the speed of light (measured in m/s).
+% Assuming we run a 1 GW nuclear power plant for 1 year, how much mass is converted to energy?
+% (BTW: this is actually what a nuclear power plant does, even though that is not immediately obvious!)
+%
+% \answergrid{7cm}
+% \item When light gets absorbed by is reflected from a surface, it actually imparts a tiny bit of force, because light has a very small momentum.
+% The equation for this is $F = P / c$, where $F$ is the force (expressed in Newtons, or `N'), and $P$ is the power of the light (expressed in Watts, `W', as above).
+% So, approximately how much force does full noon sun exert on a football field?
+
+% \fillanswergrid
+% \item Lake Yosemite (just north of campus) can be filled with about 9,159,000 m$^3$ of water.
+% If we lift this water by 10 ft, how much potential energy can we store?
+% (Reminder: the equation for energy from lifting mass is $E = mgh$, with $E$ measured in J, $m$ in kg, $g = 9.8$ m/s$^2$ and $h$ measured in m.  You'll need to convert the volume of water to mass!)  Write your answer in scientific or SI notation.
+%
+% \answergrid{8cm}
+% \item On average, the UC Merced campus uses about 1 MW of power.
+% How long could you power the campus, using the energy you got in the last problem?
+%
+% \fillanswergrid
+\end{enumerate}
+
+\fillgrid 
+\end{document}

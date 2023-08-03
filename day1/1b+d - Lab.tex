@@ -1,0 +1,180 @@
+\documentclass[12pt, letterpaper]{article}
+\input{../preamble.tex}
+
+\begin{document}
+\header{Lab 1: Oscilloscopes and Function Generators}
+\normalsize
+
+\section{Introduction}
+
+We're going to start by watching an introduction to oscilloscopes:\\
+\href{https://www.youtube.com/watch?v=Iq4QlfH-oqk}{www.youtube.com/watch?v=Iq4QlfH-oqk}
+
+Once you've watched this, let's try to get some signals on the oscilloscope:
+\begin{enumerate}
+	\item Turn on the function generator and oscilloscope.
+	\item Connect channel 1 and 2 on the function generator to channel 1 and 2 on the oscilloscope with two `BNC' cables.  (Note: the left plug on the function generator is actually channel 2!)
+	\item Enable both function generator channels (using the button above the output on the function generator), and hit the `Auto' button on the oscilloscope.
+	\item You should now see two waves on your oscilloscope -- if not ask for help.
+	\item Try playing around with the settings on both the function generator and oscilloscope and see what effect they have.  Once all the groups are caught up we will keep going.
+\end{enumerate}
+
+\section{Triggering}
+The next step is to understand the `triggering' of the oscilloscope, which is required to get a stable signal.
+Start by disconnecting channel 1 from the function generator, and connect it instead using `alligator clips' to the two little metal prongs on the lower right side of the function generator.  (You can also see this in the YouTube video below!)
+
+When you do this you should see that your signal goes from a stable wave to a mess that jumps around the screen.
+\textbf{Don't hit the auto button yet, we're going to learn how to fix this ourselves!}
+
+We'll start by watching a short video explanation:
+\href{https://www.youtube.com/watch?v=5VyotIVwRiA}{www.youtube.com/watch?v=5VyotIVwRiA}
+
+Notes on video:
+\begin{enumerate}
+	\item 1:25: DSO = Digital Store oscilloscope
+	\item 3:40: Pause and try adjusting the trigger level to get a stable signal.  If you can't ask for help.
+	\item 9:07: We can stop watching here -- we won't need the rest for this class!
+\end{enumerate}
+% 1:25: DSO = Digital Store oscilloscope
+% 3:40: Pause and get your oscilloscope to work
+% 9:07: stop
+
+\section{Basic Adjustments and Measurements}
+For the rest of the lab we won't have videos to watch, instead we're going to try to learn by doing.
+There are three things you should keep in mind:
+\begin{itemize}
+	\item Don't be afraid to try things!  (You should not be able to break the instruments by changing any of the settings.)
+	\item If you get stuck, just ask the professor or assistants!
+	\item Let everyone get a chance to play around with the instruments, so you all get a feel for it.
+\end{itemize}
+
+Set the function generator to make a `Sine' wave at 1 MHz, with 2 V amplitude and 0.5 V offset, and connect this to channel 1.
+	Adjust the triggering to get a consistent signal, and adjust the horizontal scale by hand so you see only a couple full waves on the screen.
+	
+\begin{enumerate}
+	\item Using the horizontal grid lines as a reference, what is the period of the wave?
+	(The `period' is the time it takes for the wave to go through a complete cycle.  Your answer should be expressed in `ns', or nanoseconds).
+
+	\answergrid{2cm} 
+	\item Change the frequency to 7 kHz; what is the period now?
+	You will need to adjust the horizontal scale to see it, and try using the `cursor' menu to make a more accurate measurement.  (This menu is a little confusing, so ask for help if you can't figure it out!)
+
+	\answergrid{2cm}\clearpage
+	\item What is the highest and lowest value (in Volts) that this signal goes to? 
+	
+	\answergrid{2cm}
+	\item What amplitude and offset should we use so that the signal goes from 4 V to 5 V?  (Make sure to check that this actually works!)
+	
+	\answergrid{2cm}
+	\item Set the function generator to the highest possible frequency -- what is this frequency and what is the corresponding period?
+	
+	\answergrid{2cm}
+	\item Is the maximum frequency the same for a square and triangle wave (AKA a ramp)?  If not, how fast do these go?  Do these waves still look `good' at the highest speeds?  (If you aren't sure what `good' looks like, compare the waves to what they look like at 1 kHz.)
+	
+	\answergrid{4cm}
+\end{enumerate}
+
+\section{Multiple Signals}
+
+Set the function generator to make two sine waves (one on each channel), both at 1 kHz, 1V amplitude, 0V offset.  Connect both, trigger off the first signal and get both nicely on the screen.
+(Do this without using the `Auto' button.)
+
+Leaving the first channel alone, try to set the amplitude of the first channel to the highest possible value, and the second channel to the smallest possible value.  
+Adjust the vertical scales on the oscilloscope so that you can see both signals nicely.
+
+\begin{enumerate}
+	\item What are the highest/lowest amplitudes you can make? 
+	Do this signals both look `good'?
+	If not, what happens to them?
+	
+	\answergrid{4cm}
+	\item Change the amplitude of both signals back to 1V, and get a nice view of both again.  
+	Trigger off the 1st channel and now set the `phase' value of the second signal -- what does this do to the two signals?
+
+	\answergrid{3cm}\clearpage
+	\item Set the oscilloscope into `X-Y' mode.  Sketch what the X-Y signal looks like when the phase of the first signal is 0\deg and the \textbf{second} signal is 0\deg, 30\deg, 45\deg, 90\deg, and 180\deg.  	Discuss what is happening here.
+	
+	\fillanswergrid
+	
+	\item Now set the phase of the \textbf{first} channel to  30\deg.  You should notice the X-Y graph looks different now!  If we leave the phase of the first signal alone, can we change the phase of the \textbf{second} so that the signal looks the same as when both phases were 0\deg?  What is the phase of the second signal when this happens?  Discuss why this happens!
+	
+	\answergrid{3cm}
+	\item
+	Suppose we wanted the X-Y signal to look the same as when phase 1 was 0\deg and phase 2 was 90\deg?  What should phase 2 be if phase 1 is 30\deg?
+	
+	\answergrid{3cm}
+\end{enumerate}
+
+\section{The Speed of Ultrasound}
+
+You been provided with some little devices convert electrical signals into sound waves and vice-versa.  You should have one labelled `T' (for transmitter) and one labelled `R' (for receiver), and they the round cylinders mounted in plastic holders.
+By the way `transducer' is the term for something that converts energy from one for to another -- usually it converts things either to or from electrical energy.
+
+These devices are what are known as `resonant' transducers, this means they can only transmit or receive a small range of frequencies.  
+In this case, they only work around 40 kHz, which is a sound frequency that is too high for humans to hear.
+(Although dogs definitely \emph{could} hear it!)
+
+Were going to use these to measure the speed of sound.
+To get started:
+\begin{enumerate}
+	\item Mount both the transmitter and receiver on the black railing with the ruler on it.  The sides with the wires should be facing away from each other.
+	\item Connect the transmitter (T) to a BNC cable with the `alligator clips'.  It doesn't really matter which of the `leads' connects to the red wire and which to the black wire.
+	\item Use a BNC `tee' to connect the signal from the function generator to both the transmitter and the oscilloscope.
+	\item Set the function generator to output a sine wave with 5V amplitude, 0 V amplitude and 40 kHz frequency.
+	\item Trigger off this channel so that you get a steady signal.
+	\item Connect the receiver (R) to the second channel of the oscilloscope with the test clips.
+\end{enumerate}
+
+Now let's make some measurements!
+
+\begin{enumerate}
+	\item If you move the transmitter near the receiver, you should see that you can transmit a signal!  Try attaching both to the metal rail, and move them around.  What happens to the signal?
+
+	\answergrid{3cm}
+	\item With both screwed down, switch the black and red alligator clips on the transmitter.  What happens to the signal on the receiver? 
+
+	\answergrid{3cm}
+	\item Now try changing the frequency of the transmitter -- what happens to the signal on the receiver?  How high or low can you go and still get a decent signal?  Which is the `best' frequency to use?
+	
+	\answergrid{3cm}
+\end{enumerate}
+
+Since the transmitter is sending sound to the receiver, we should get a delay based on how long it takes sound to move between them.
+We can use this to measure the speed of sound!
+
+To do so, we don't want a continuous signal, but rather a `burst'.
+We can set this up with the `burst' button on the function generator.  
+In the burst menu set up the following options on the first page: \textbf{Period:} 10 ms, \textbf{NCycle}, \textbf{Source:} internal.
+On the second page: \textbf{Cycles:} 10.
+
+You should be able to see that the signal on the oscilloscope only oscillates for 10 periods at a time now.
+If it doesn't work ask for help (the burst menu is sort of confusing, so you may need to play around!)
+
+Set the receiver and transmitter about 30 cm apart -- you should now be able to adjust the oscilloscope settings to see both the burst and the delayed response of the receiver.
+If you move the receiver relative to the transmitter you should see the receiver signal shift.
+
+\begin{enumerate}
+	\item To measure delay caused by sound we need to measure the time interval between the transmitter signal and the receiver response.
+	But... both signals have some width in time, so how would we determine where to start and stop our `timer'?
+	Sketch a graph of the signals and mark what you will use as the reference points.
+	Ask the professor or assistants to look at your answer before moving on!
+	
+	\fillanswergrid
+	\item Measure the delay (using the method you described above) for a bunch of different separations between the transmitter and receiver.
+	Make a chart with at least 5 different distance and delay values, or even 10 if you have time.
+	(Note: you can use the scale on the railing to determine distance.)
+	
+	\fillanswergrid
+\end{enumerate}
+
+
+\section{If you finish early...}
+\begin{itemize}
+	\item Try changing the number of `cycles' in the burst, and see how this affects the signal.  Could you make a better measurement of the delay?  (And if so, why?)
+	\item Put the function generator in continuous (i.e.~not burst) mode and then look at the transmitted/received signals in X-Y mode.  Discuss if you could use this to measure delays and/or the speed of sound.
+	\item Spend some time exploring the different functions of the oscilloscope and function generator.  You can make some cool plots with X-Y mode and signals of different frequencies.
+\end{itemize}
+
+\end{document}
+
+

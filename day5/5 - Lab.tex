@@ -1,0 +1,136 @@
+\documentclass[12pt, letterpaper]{article}
+\input{../preamble.tex}
+
+\begin{document}
+\header{Day 5: Interference of Waves and Diffraction}
+\normalsize
+
+
+The main goal of today is to measure the wavelength of light. 
+As it turns out, this wavelength is very very small, so we can't easily measure it the same way we did with sound.
+
+Originally, it was measured using a `double-slit' experiment, which was also the first way to demonstrate the wave nature of light.
+Here's a great YouTube video which explains:
+\href{https://www.youtube.com/watch?v=Iuv6hY6zsd0}{www.youtube.com/watch?v=Iuv6hY6zsd0}
+
+Today we're going to do something similar.
+I will show you how to measure the wavelength of light using just a laser pointer and a regular ruler!
+% , even though the divisons on the ruler are 1000's of times bigger than the wavelength!
+%
+% \section{Part 1: A `Two-Slit' Experiment with Sound}
+%
+% \begin{enumerate}
+% 	\item In your box of supplies you should find a clear plastic mount with three small black cylinders in it.
+% 	These cylinders are ultrasonic speakers, just like the larger silver ones we used a couple days ago.
+% 	Clamp this mount to one side of the table, and clamp the black `T-slot' railing on the other side of the table (the professor will draw a diagram of the setup on the board).
+%
+% 	\item Connect the outer two speakers to channels 1 and 2 on the function generator.
+% 	Using a BNC `tee', split off the signal on channel 1 and send it to the oscilloscope.
+% 	Set both channels to output a 5 V sine wave with 40 kHz frequency, 0 V offset, and 0 degrees phase.
+% 	You have now set up a `two slit' experiment (or maybe a two-speaker experiment)!
+%
+% 	\item To measure the sound pattern this produces, attach a side-mounted ultrasonic receiver (made of clear plastic) on the black railing.
+% 	Hook this up to channel 2 on the oscilloscope with an alligator clip cable.
+%
+% 	\item If you slide the receiver along the railing, you should see that the amplitude goes up and down; this is the interference pattern!
+% 	What do you think would happen if you turn off channel 2?
+% 	After you've made a guess, try it and see if you are right!
+%
+% 	\clearpage
+% 	\answergrid{5cm}
+%
+% 	\item Turn the second channel back on.
+% 	Now, using GoogleDocs, make a table of the received signal amplitude as a function of position.
+% 	Then make a plot of the resulting `interference pattern'.
+% 	(Try to have 20 or more points, so that you can see the signal strength oscillating nicely!)
+%
+% 	\item According to Wikipedia (\href{https://en.wikipedia.org/wiki/Double-slit_experiment}{en.wikipedia.org/wiki/Double-slit\_experiment}), the spacing between maximums or minimums is given by: $w = z \lambda / d$, where $d$ is the spacing between the `slits' (here the distance between the black speakers that are being used), $\lambda$ is the sound wavelength, and $z$ is the distance from the speakers to the receiver.
+% 	Use this information and your interference pattern to try to measure the wavelength of sound, $\lambda$!
+% 	(This requires a lot of steps -- if you get stuck ask for help!  Also: you may want to go back and try to more precisely measure the maximum or minimum positions.)
+%
+% 	\fillanswergrid
+% 	\grid{10cm}
+%
+% 	\item Put your receiver at a location on the railing where the signal is largest.
+% 	Suppose we change the phase of channel 2 to 180 degrees -- what do you think will happen to the received signal?
+% 	After you've made a guess, try it and see if you are right!
+%
+% 	\answergrid{5cm}
+%
+% 	\item (optional if you have time) Instead of using the outer two speakers, switch to using one of the middle speakers and an edge speaker.
+% 	What do you think should happen to the interference pattern?
+% 	After you have made a prediction, try it!
+%
+% 	\answergrid{5cm}
+%
+% 	\item (optional if you have time) Using GoogleDocs, make a plot of the interference pattern with the different speakers.
+%
+% 	\item (optional if you have time) Again, use this new speaker setup to measure the wavelength of sound.  (You should get the same answer as before if you did everything right!)
+%
+% 	\fillanswergrid
+% \end{enumerate}
+
+
+
+\section{Diffraction: Measuring the Wavelength of Light}
+
+% We can use a similar interference approach to measure the wavelength of light.
+Instead of using two slits, we're going to use the lines on a ruler as our `slits'.
+Thus, instead of using a two-slit experiment, we will do a \emph{many} slit experiment.
+The idea is that if we shine a laser beam at the ruler, the light will bounce off the spots between the ruler ticks, each acting like a `slit', and producing an interference pattern.
+It turns out this works well if the laser hits the ruler at a shallow angle, which causes the spots to be further apart.
+
+\textbf{Laser safety warning:} As always: make sure the laser is pointing away from people before you turn it on!  Today we will be using some brighter lasers, so you need to be even more careful than yesterday.
+
+\begin{enumerate}
+	\item We're going to start with the laser we used for the speed of light.
+	Set this up at one end of the railing, and put the vertically mounted ruler at the other end of the railing.
+	% Set up the black railing near the edge of a table.
+	% Put the optics mount at one edge of the railing and mount the laser in the orange circle in it.
+	Turn on your laser to \textbf{low power} (3.5 V max) while you align things.
+	Now point the laser slightly down, so that it hits the black railing near the center.
+	(The professor will draw a diagram of the setup on the board -- this should make it easier to understand.)
+	
+	\item Now lay a (silver) ruler on the black railing so that the laser spot bounces off the (silver) ruler onto the vertically mounted ruler.  You should see that if the laser hits a blank spot on the ruler you get one reflected spot, but if it hits the ruler ticks you get many.
+	
+	\item Consider the following question: if you use closer ruler ticks (e.g.~using the 0.5 mm spaced lines instead of 1 mm), do you expect the reflected spots closer together or further apart?
+	
+	\textbf{Write down an answer first}, and then try it.  
+	Were you right?
+	Discuss as a group why you got the result you did.
+	
+	\answergrid{5cm}
+	
+	\item The spacing between the `directly' reflected spot (this is the reflected spot you get \emph{without} the ruler ticks) and it's neighbors is approximately given by: $x = \frac{L^2 \lambda}{d h}$, where $L$ is the distance from where the spot hits the (silver) ruler to the vertical ruler, $d$ is the spacing between ruler ticks, and $h$ is the height of the directly reflected spot.
+	Use this information and your measured distances to determine the wavelength of light.
+
+	\fillanswergrid
+	
+	\item A hair is about 100 $\mu$m wide.  How many wavelengths could you fit in one hair width?
+		
+	\answergrid{5cm}
+	\item Using your wavelength and the speed of light you measured yesterday, compute the frequency of the light wave.
+	(Reminder: $v = \lambda f$)
+	
+	\fillanswergrid
+	\item How many times faster is this frequency that the fastest frequency your function generator can produce?  
+	Do you think it would be possible to make electronics fast enough to measure this frequency directly?
+	(In other words: do you think it would be possible to see this waveform \emph{in time} on an oscilloscope?)
+	
+	\answergrid{5cm}
+	
+	\item You can replace your little laser with one of the three laser pointers I have -- each has a different color.  
+	If you have time, try to measure the wavelength and compute the frequency of each.
+	You should find that it varies with color!
+	
+	You can compare your results for the wavelength to known values for different colors: \url{https://en.wikipedia.org/wiki/Visible_spectrum}
+	
+	Does bluer light have lower or higher wavelength?  Does it have lower or higher frequency?
+	
+	\fillanswergrid
+	
+	
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[12pt, letterpaper]{article}
+\input{../preamble.tex}
+
+% \usepackage{nth}
+% \usepackage{xcolor}
+% \usepackage{hyperref}
+% \usepackage[letterpaper,margin=1in]{geometry}
+% \usepackage{amsmath}
+% \usepackage[parfill]{parskip}
+%
+% \hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+%
+% \newcommand{\email}[1]{\href{mailto:#1}{#1}}
+% \newcommand{\U}[1]{\textrm{ #1}}
+% % \vspace{1\baselineskip}
+
+\begin{document}
+\header{Day 4 Worksheet: Measuring the Speed of Light}
+Our goal today is to measure the speed of light as \emph{accurately and precisely} as possible.
+If you don't know what this means, we'll talk about it in class or you can look at wikipedia: \href{https://en.wikipedia.org/wiki/Accuracy_and_precision}{en.wikipedia.org/wiki/Accuracy\_and\_precision}
+
+\textbf{We're going to make this a competition: we will see who can get the best result, and we will give awards based on your score!}
+
+We will do this in two phases:
+\begin{enumerate}
+	\item First you will build an apparatus to measure the speed of light, and come up with a written plan for making your measurement.
+	You should try testing it out, and modifying it to improve your accuracy.
+	\item Once you have finalized a plan, you will execute your plan 4--10 different times.
+	At the end, you have at least 4 different independent measurements of the speed of light.
+\end{enumerate}
+
+The design of the experiment is up to you, and you are welcome to get creative!
+You should consider:
+\begin{itemize}
+	\item Where will you place the laser, photodiode, and mirror (assuming you are using a mirror)?
+	\item How far does the laser need to travel to get an accurate measurement?  How long can you go?
+	  You aren't restricted to the black T-slot rail, however, your experiment must fit in the room!
+	\item How will you measure the distance the laser travels?
+	\item What resistor will you use for the photodiode?
+	\item What frequency will you use to modulate the laser?
+	\item How will you correct for `offset' which comes from the electronics?
+	\item How many individual data points go into each measurement?  1, 2, or many?  Do you want to fit a line?
+	\item Will making more measurements improve your precision or accuracy?
+	\item Do you need anything that isn't already in the lab?  If so, ask, and maybe we can borrow something from my lab.
+\end{itemize}
+
+You will receive two scores:
+\begin{enumerate}
+	\item `Precision': how repeatable is your measurement?  This will be computed from the \textbf{standard deviation} of your 4--10 measurements.  Your score will be based on the relative precision compared to the accepted value (see equation/table below).
+	% For example: if your standard deviation between measurements was $3 \times 10^6$ m/s, this is 1\% of the actual value (about $3 \times 10^8$ m/s. Thus you would receive 20 points (see below).
+	\item `Accuracy': how close is your average value to the exact value (299,792,458 m/s)?  The difference between your \textbf{average} value and the accepted one is used to obtain a score below.  Once restriction: your accuracy score is \emph{at most} your precision score + 10 points.  (This is to prevent a group from getting lucky on their average value, even if their precision is terrible!)
+\end{enumerate}
+
+The score for each is be computed as:
+ % (error is the standard deviation \emph{or} difference from the accepted value, depending on which score we are computing)
+
+\begin{centering}
+
+\begin{align}
+	\textrm{score} = 10 \log_{10} \left(\frac{\textrm{exact value}}{\textrm{error}}\right)
+\end{align}
+
+\begin{tabular}{r|l}
+	\textbf{Error}&\textbf{Points}\\
+	\hline
+	10\% & 10\\
+	3.2\% & 15\\
+	1\% & 20\\
+	0.32\% & 25\\
+	0.1\% & 30\\
+	0.032\% & 35\\
+	0.01\% & 40
+\end{tabular}
+
+\end{centering}
+
+Additional rules:
+\begin{enumerate}
+	\item Once you start executing your plan, you must stick to it.  You can (and should) do preliminary measurements to test your technique before you start your final runs.
+	\item You are welcome to try different photodiodes, lasers, resistors, etc.~if you think it will make a difference.
+	\item You must execute your plan at least 4 times.  If you do it more than 4 times, all the values will be used for your scores -- you can not `drop' bad measurements.
+	\item A `measurement' can use as many data points as you would like.  For example, perhaps you measured the delay at 5 different distances at fit a line to this -- in this case you would take 20 total data points if you make 4 `measurements'.
+\end{enumerate}
+
+
+\textbf{Example:}
+ 
+Group 1 measured the speed of light 4 times and obtained: (2.941, 2.993, 3.051, 3.002) $\times 10^8$ m/s.
+The standard deviation of this measurement is 0.0451 $\times 10^8$ m/s, which is a 1.5\% error for 18.2 points in the precision category.
+The average is 2.9968 $\times 10^8$ m/s, which is a 0.039\% error for 34.1 points in the accuracy category.
+However, the accuracy score is higher than the precision score + 10, which is not allowed, so it is capped at 28.2 points -- this results in a total score of 52.3 points.
+
+
+Group 2 measured the speed of light 5 times and obtained: (2.801, 2.805, 2.804, 2.806, 2.802) $\times 10^8$ m/s.
+The standard deviation of this measurement is 0.002 $\times 10^8$ m/s, which is a 0.07\% error for 31.6 points in the precision category.
+The average is 2.803 $\times 10^8$ m/s, which is a 6.48\% error for 11.9 points in the accuracy category.
+This results in a total score of 43.5 points.  (The cap on accuracy does not apply here.)
+
+Notice that although group 2 had very precise measurements -- they got almost exactly the same result each time, their \emph{average} was very far off.  
+This suggests they had a systematic error: perhaps they didn't correct for offset properly or had some other problem -- you should look out for these types of errors when you design your experiment!
+Group 1 had a larger deviation between their measurements (and hence a lower precision score), but their average was very close to the true value.
+In this case, Group 1 would win!
+
+\vspace{2em}
+
+{\Large Your measurement plan:}
+
+\fillgrid
+\fillgrid
+
+\end{document}

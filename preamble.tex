@@ -1,0 +1,92 @@
+\usepackage{nth}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[parfill]{parskip}
+\usepackage{fullpage,bm}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, calc}
+
+\hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+\newcommand{\U}[1]{\textrm{ #1}}
+% \vspace{1\baselineskip}
+
+\newcommand{\answergrid}[1]{
+\hspace{-1cm}
+\vspace{2em}
+\tikz[remember picture, overlay] \node[inner sep=0, anchor=base] (tl) {}; %
+\vspace{#1} \hfill%
+\tikz[remember picture, overlay] \node[anchor=south west] at (tl.north) {\textbf{Answer:}};
+\tikz[remember picture, overlay] \coordinate (br); %
+\tikz[remember picture, overlay] \draw[step=5mm, blue!50]%
+	let \p1=(tl.north), \p2=(br) in [yshift={mod(\y1-\y2, 5mm)}, xshift=\x1] %
+	(0, 0) grid ( %
+		{\x2 - \x1 - mod(\x2-\x1, 5mm) + 5mm + 0.1pt}, %
+		{-#1 - mod(-#1, 5mm) - 0.1pt} %
+	); %
+}
+
+\newcommand{\grid}[1]{
+\hspace{-1cm}
+\vspace{2em}
+\tikz[remember picture, overlay] \node[inner sep=0, anchor=base] (tl) {}; %
+\vspace{#1} \hfill%
+\tikz[remember picture, overlay] \coordinate (br); %
+\tikz[remember picture, overlay] \draw[step=5mm, blue!50]%
+	let \p1=(tl.north), \p2=(br) in [yshift={mod(\y1-\y2, 5mm)}, xshift=\x1] %
+	(0, 0) grid ( %
+		{\x2 - \x1 - mod(\x2-\x1, 5mm) + 5mm + 0.1pt}, %
+		{-#1 - mod(-#1, 5mm) - 0.1pt} %
+	); %
+}
+
+\newcommand{\fillanswergrid}{
+\hspace{-1cm}
+\vspace{2em}
+\tikz[remember picture, overlay] \node[inner sep=0, anchor=base] (tl) {}; %
+\vfill\hfill%
+\tikz[remember picture, overlay] \node[anchor=south west] at (tl.north) {\textbf{Answer:}};
+\tikz[remember picture, overlay] \coordinate (br); %
+\tikz[remember picture, overlay] \draw[step=5mm, blue!50]%
+	let \p1=(tl.north), \p2=(br) in [yshift={mod(\y1-\y2, 5mm)}, xshift=\x1] %
+	(0, 0) grid ( %
+		{\x2 - \x1 - mod(\x2-\x1, 5mm) + 5mm + 0.1pt}, %
+		{\y1 - mod(\y1-\y2, 5mm) + 0.1pt} %
+	);
+\clearpage
+}
+
+\newcommand{\fillgrid}{
+\hspace{-1cm}
+\tikz[remember picture, overlay] \node[inner sep=0, anchor=base] (tl) {}; %
+\vfill\hfill%
+\tikz[remember picture, overlay] \coordinate (br); %
+\tikz[remember picture, overlay] \draw[step=5mm, blue!50]%
+	let \p1=(tl.north), \p2=(br) in [yshift={mod(\y1-\y2, 5mm)}, xshift=\x1] %
+	(0, 0) grid ( %
+		{\x2 - \x1 - mod(\x2-\x1, 5mm) + 5mm + 0.1pt}, %
+		{\y1 - mod(\y1-\y2, 5mm) + 0.1pt} %
+	);
+\clearpage
+}
+
+
+\newcommand{\header}[1]{
+\begin{center}
+{\bf
+\huge #1
+
+\large Summer STEM Academy: 
+
+Measuring things which are very fast or very small
+
+}
+\end{center}
+
+}
+
+\renewcommand{\deg}{\ensuremath{^\circ}}

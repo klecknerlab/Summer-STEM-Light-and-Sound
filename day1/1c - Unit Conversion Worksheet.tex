@@ -1,0 +1,238 @@
+\documentclass[12pt, letterpaper]{article}
+\input{../preamble.tex}
+
+% \usepackage{nth}
+% \usepackage{xcolor}
+% \usepackage{hyperref}
+% \usepackage[letterpaper,margin=1in]{geometry}
+% \usepackage{amsmath}
+% \usepackage[parfill]{parskip}
+%
+% \hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+%
+% \newcommand{\email}[1]{\href{mailto:#1}{#1}}
+% \newcommand{\U}[1]{\textrm{ #1}}
+% % \vspace{1\baselineskip}
+
+\begin{document}
+\header{Day 1 Worksheet: Converting Units}
+
+In this workshop we will be measuring physical things like space and time. 
+In order to do this, we need to understand a little bit about `units': what they are and how to convert between them.
+
+By `units', I mean units of measurement, for example \textbf{distance} measurements like inches or kilometers, or \textbf{time} measurements like seconds or years.
+ % e.g.~you are probably familiar with the metric (meters, kilograms) or imperial (feet, pounds) systems of measurements.
+% For our purposes, there are two types we care about the most: distance and time.
+You can think about these as physical things that exist in the universe, and we have different ways of representing them.
+% For example: you might measure distance in microns, meters, feet, or light-years.
+% Similarly you might measure time in nanoseconds, seconds, or years.
+If you want, you can represent them anyway you want, but usually there is a best choice for every situation.
+% In each case, it is usually more convenient to use one or the other representation, depending on the circumstances.
+% Often, in science we need to understand how to convert between them: that's what we'll be doing right now.
+Often, we need to be able to convert between them -- for example you might want to convert the speed of sound measurement you will make tomorrow from cm/ms (centimeters per millisecond) to m/s (meters per second) or mi/hr (miles per hour).
+
+By the way: in the metric system, there is a convenient way to represent really big and really small numbers by modifying units (e.g. centimeters or kilometers instead of meters).
+There is also `scientific notation', which is another convenient way to represent really big and really small numbers.
+We'll talk more about both of these, and how they are related, tomorrow!
+
+To get started, I found a nice YouTube video which explains basic unit conversion:\\ \href{https://www.youtube.com/watch?v=HRe1mire4Gc}{www.youtube.com/watch?v=HRe1mire4Gc}
+
+
+By the way: for this class we will mostly care only about distance and time units.
+Of course there are other types of units like energy, mass, power, etc., but we won't need to know anything about them.
+If you're curious: feel free to ask!
+The only other types of units we will use are Volts (V), which is a measure of electrical `potential energy'.
+There's really only one way to represent them, unless you count milliVolts (1000 mV = 1V), but these are super easy to convert.
+% (You may also see milliVolts -- 1000 mV = 1 V -- but that's pretty easy to convert.)
+
+\clearpage
+
+
+\section{Distance}
+Now that we know how to convert between different types of units, all we really need to know is how all the different units are related.
+Here's a table to help you out:
+
+
+\begin{centering}
+	
+\begin{tabular}{r|l}
+\textbf{Unit}&\textbf{Symbol / Relation}\\
+\hline
+inch & 1 in = 25.4 mm\\
+foot & 1 ft = 12 in\\
+yard & 1 yd = 3 ft\\
+mile & 1 mi = 5,280 ft\\
+meter & 1 m\\
+centimeter & 100 cm = 1 m\\
+millimeter & 1,000 mm = 1 m\\
+kilometer & 1 km = 1,000 m
+\end{tabular}
+
+\end{centering}
+
+
+\textbf{Exercises:}
+
+\begin{enumerate}
+\item How many mm are in 1 ft?
+
+\answergrid{5cm}
+
+\item How many m are in 1 mi?
+
+\answergrid{5cm}
+\end{enumerate}
+
+\clearpage
+
+\section{Time}
+Time is even simpler, since we don't have to worry about conversion between metric and imperial units!
+
+\begin{centering}
+	
+\begin{tabular}{r|l}
+\textbf{Unit}&\textbf{Symbol / Relation}\\
+\hline
+nanosecond & 1,000,000,000 ns = 1 s\\
+microsecond & 1,000,000 $\mu$s = 1 s\\
+millisecond & 1,000 ms = 1 s\\
+second & 1 s\\
+minute & 1 min = 60 s\\
+hour & 1 hr = 60 min\\
+day & 1 day = 24 hr\\
+year & 1 year = 365.25 days
+\end{tabular}
+
+\end{centering}
+
+% Note that nanoseconds/microseconds are easier to deal with in terms of scientific notation -- we'll discuss that tomorrow!
+
+\textbf{Exercises:}
+
+\begin{enumerate}
+\item How many seconds are in a day?
+
+\answergrid{5cm}
+
+\item How may minutes are in a year?
+
+\answergrid{5cm}
+
+\item How may $\mu$s are in 1 ms?
+
+\answergrid{5cm}
+\end{enumerate}
+
+
+\section{Combinations of Units}
+We can also combine these to produce things like area (distance \emph{times} distance) or speed (distance \emph{divided by} time).
+Conversion is relatively straightforward, and is probably best illustrated by example.
+
+\textbf{Example:}
+
+The record for the 100 yard dash in 9.07 s. 
+What is this in terms of km/hr?
+
+\begin{centering}
+	
+\begin{align}
+	100 \U{yd} &= 300 \U{ft} \times \frac{1 \U{m}}{3.28084 \U{ft}}\\
+	&= 91.44 \U{m}\\
+	&= 0.09144 \U{km}\\
+	9.07 \U{s} &= 9.07 \U{s} \times \frac{1 \U{hr}}{3600 \U{s}}\\
+	&= 0.002519 \U{hr}\\
+	\Rightarrow \frac{100 \U{yd}}{9.07 \U{s}} &= \frac{0.09144 \U{km}}{0.002519 \U{hr}}\\
+	&= 36.29 \U{km/hr}
+\end{align}
+
+\end{centering}
+
+\clearpage
+
+\textbf{Exercises:}
+
+\begin{enumerate}
+
+\item What is 1 m/s in mi/hr?
+
+\answergrid{5cm}
+\item What is 50 mi/hr in cm/ms?
+
+\answergrid{5cm}
+\item The earth orbits the sun at a speed of about 67,000 mi/hr.  What is this m/ms?
+
+\answergrid{5cm}
+\item (continued) What about this speed in mm/$\mu$s?
+
+\answergrid{5cm}
+\item (continued) What about this speed in $\mu$m/ns?
+
+\answergrid{5cm}
+\item For some reason, in the US we measure land area in terms of `acres', which is one chain (66 ft) by one furlong (660 ft).
+What is this in terms of m$^2$ (meters squared)?
+
+\answergrid{5cm}
+\item What is 1 mi$^2$ (miles squared) in terms of m$^2$?
+
+\answergrid{5cm}
+\item How many acres are in 1 km$^2$?
+
+\fillanswergrid
+% \item From the data you took at the end of the oscilloscope lab, you should be able to estimate the speed of sound.
+% Do this using just two of your data points, and write your answer in terms of both mi/hr and m/s.
+% (Ask if you need help: you'll need to make some logical leaps!)
+%
+% \fillanswergrid
+%
+% \fillgrid
+
+\end{enumerate}
+
+% \section{Other Units}
+%
+% \subsection{Electrical Voltage}
+% We'll also encounter `voltage' in this class, which is a measure of electrical energy (or more precisely: energy per unit of charge).
+% This is always measured in Volts (V): there is no metric or imperial alternative!
+% You may also encounter millivolts (mV) which is 1/1000 V.
+% You won't need to know anything else about volts, and you won't need to convert between them!
+
+% \subsection{Bonus: Mass and Energy}
+% \textbf{This is not important to complete, but if you have extra time give it a try!}
+%
+% There are many other types of units, but perhaps the most important are:
+% \begin{itemize}
+% 	\item mass: usually measured in grams (g) or kilograms (kg).  1 kg is approximately 2.2 lbs.
+% 	\item energy: measured in Joules (J).
+% 	\item power: power is energy per time, measured in Watts (W).  1 W = 1 J/s.
+% \end{itemize}
+%
+%
+% \textbf{Exercises:}
+% (Note: these are harder than the last ones, and you may need some help to figure them out!)
+%
+% \begin{enumerate}
+% \item When you get a power bill, the total energy you used is listed in terms of kilowatt hours (kWh = 1 kW $\times$ 1 hr).  How many Joules is 1 kWh?
+% (Note: 1 kW = 1000 W, and 1 J = 1 W $\times$ 1 s)
+%
+% \fillanswergrid
+%
+% \item The energy required to accelerate an object is given by $E = \frac{1}{2} m v^2$, where $E$ is measured in J, $m$ is measured in kg and $v$ is measured in m/s.
+% So... how many kWh is needed to accelerate a Tesla model 3 (which weighs about 4000 lbs) to 75 mph?
+%
+% \answergrid{7cm}
+% \item The energy required to lift an object in gravity is given by $E = mgh$, where $g = 9.8$ m/s is the acceleration of gravity and $h$ is measured in m.
+% So... how many kWh is needed to lift a Tesla model 3 from sea level to Tioga pass in Yosemite ($h$ = 9,943 ft)?
+% Approximately what percentage of the battery in the car is this?  (You'll have to look up the capacity of a Tesla battery!)
+%
+% \fillanswergrid
+%
+% \item How many kWh does it take to heat a gallon of water from 20 C to boiling?
+% (To figure this out, you need to know that it takes 4.2 J to heat 1 g of water by 1 C... there are also some other conversions you'll need to figure out on your own!)
+%
+% \fillanswergrid
+% \end{enumerate}
+
+\clearpage
+\fillgrid
+
+\end{document}

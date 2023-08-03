@@ -1,0 +1,145 @@
+\documentclass[12pt, letterpaper]{article}
+\input{../preamble.tex}
+
+\begin{document}
+\header{Day 3: Measuring Light}
+\normalsize
+
+\section{Part 1: LED and Photodiode}
+
+Today we're going to prepare for measuring the speed of light.
+To get started, we're going to experiment with generating and detecting light, starting with an LED (light emitting diode), and then switching to a laser.
+
+You will be provided with two adjustable mounts: (1) contains a laser and photodiode (light detector) mounted next to each other, and (2) contains a single LED.
+
+\begin{enumerate}
+	\item Connect your mounted LED to the function generator.
+	Note: the long wire of the LED with the resistor attached connects to the positive (red) wire.
+	Try setting the function generator to a low level of 0 V and a high level of 5 V.
+	Output a 3 Hz Sine wave, and you should see the LED flashing!  (You can play with the settings, but \textbf{never set the high level more than 5V}, as you will break the LED!)
+	
+	\item Now we need to set up a circuit to detect this light.  On the other side of the breadboard, connect a photodiode circuit with a 100 k$\Omega$ resistor.  (The professor will show the required circuit on the projector -- ask for help if you can't figure out how to set this up.)
+	
+	\item Place your LED near the photodiode, so the light is shining on it.
+	You should now see a signal coming from the photodiode, in response to the LED light.	
+	(If you don't, ask for help: your circuit is probably hooked up wrong!)
+	You will noticed that the photodiode signal never goes negative, but gets cut-off at small values.
+	If you increase the low level of the output you should be able to get a nice sine wave; what is the best voltage for this?
+	
+	\answergrid{3cm}
+\item Set up your oscilloscope to measure the peak-to-peak or RMS amplitude of the signal from the photodiode.
+	If you increase the frequency enough, you will notice that the amplitude starts to decrease!
+	This happens because the photodiode doesn't respond fast enough.
+	What is the frequency at which the amplitude is roughly half of what it is at 1 kHz?
+
+	\answergrid{3cm}
+\item Replace the 100 k$\Omega$ resistor with a 10 k$\Omega$ resistor, and set the frequency of the LED back to 1 kHz.
+What happens to the amplitude of the signal, compared to the larger resistor?  (You may need to zoom in to see it!)
+
+	\answergrid{3cm}
+\item What frequency do you need to go to now to get the amplitude to decrease to one half the 1 kHz value?
+
+	\answergrid{3cm}
+\item Repeat with a 1 k$\Omega$ resistor.
+What happens at high speed now?  (Try a few values in the range of 1 -- 10 MHz.)
+
+
+	\fillanswergrid
+	
+	\item Try blocking the LED, and leave the function generator to a high frequency (1--10 MHz).
+What happens to the signal?
+Does this still happen at low frequency (e.g.~1 kHz)?
+
+	\answergrid{5cm}
+\item Discuss what is happening here!  This is an important thing to consider when we measure the speed of light, as we will see later.
+
+\item
+Based on your results, what is the highest frequency light signal you could reliably measure with the photodiode setup?
+What resistor would you use for this?
+
+	\answergrid{5cm}
+\end{enumerate}
+
+If you have some extra time, try putting the 10 k$\Omega$ resistor back in the photodiode circuit, and see what happens to the phase of the response as the frequency increases. 
+You can do this with X-Y mode or by using the `wavefit' program.
+
+You can also do this with the 1 k$\Omega$ resistor.
+
+\section{Part 2: Speed of Signals in Wires}
+For this part you will need to use the wavefit program -- if you haven't already used this ask one of the instructors to help you set it up.
+
+\begin{enumerate}
+	\item Connect both channels of the function generator directly to the oscilloscope with regular length BNC cables.
+	You should have a few different options: use the shortest cable for channel 1, and a slightly longer (but not super long) one for channel 2.
+	Set the wave to 1 V amplitude, 0 V offset, 1 MHz \textbf{square} wave.
+	\item If you zoom in on the oscilloscope, you should see that the square wave of the two channels start at slightly different times (probably 1--20 ns offset between channels 1 and 2).  Using the cursors, measure this delay: what is it?
+
+	\answergrid{3cm}
+	\item Now extend the wire on channel 2 by adding the long BNC cable to the one already connected.  (You can join together two BNC cables with a BNC `barrel'.)  What is the delay now?
+
+	\answergrid{3cm}
+	\item What is the length of the BNC cable you added?
+
+	\answergrid{3cm}
+	\item Using this information... what is the speed of the signals in the cable?  Express this in terms of mm/ns, m/s, and mi/hr.
+
+	\answergrid{5cm}
+	\item We can also measure this delay using the relative phase of sine waves, and the `wavefit' program.  To do this, set both of the function generator channels to sine waves, with the same frequency and offset.  Now, using the wavefit program, measure the delay between channel 1 and 2 with two different BNC cables.  What is the speed in terms of mm/ns when measured this way?
+
+	\answergrid{5cm}
+	\item Try the same measurement using 5 MHz and 25 MHz waves.  What results do you get?  Which do you think is most accurate?
+
+	\fillanswergrid
+\end{enumerate}
+
+\section{Part 3: Laser diode and Photodiode}
+{\large
+\textbf{Laser Safety Warning:} when working with the laser diode, never operate it at full power \textbf{unless you already know what it is pointing at}.  
+When adjusting the position or angle of the laser, set the `high level' to \textbf{a maximum of 3.5 V} on the function generator.
+Even at this low power, \textbf{never look directly into the laser}.
+Any time you are changing where it is pointing or what is in front if it, you need to do this at the low power setting.
+Once you are happy with where it is going, and there is no one in the path, \textbf{then} you can turn it up to high power.
+}
+
+\begin{enumerate}
+	\item We can replace our LED with a laser diode, which is mounted next to the photodiode.
+	\item Connect the leads from the laser diode directly to the function generator (black $\rightarrow$ blue and red $\rightarrow$ red).  
+	Note: these laser diodes work just like the LED, only the resistor is built into the housing.
+	\item Output a 1 kHz Sine wave with a low level of 3 V and a high level of 3.5 V.  You should see light coming out of the laser now, but it should not be too bright.
+	This is the level we will use to adjust the position of the laser.  % Turn off the laser for now.
+	\item We need to reflect the laser back on to the photodiode, you can do this using a mirror in one of the adjustable mounts.  Ask the professor or one of the assistants to replace your LED mount with a mirror.  Mount the mirror so it is facing the laser/photodiode and is about 1 foot away.
+	\item
+	Now we can adjust the angle of the laser and the mirror to reflect the laser back on to the photodiode.  Note that the black knobs on the mounts can be used to adjust angles very precisely -- first point the laser at the center of the mirror, and then adjust the mirror so it comes  back onto the photodiode.  
+	% \item Build a photodiode circuit with 1 k$\Omega$ resistor on the small breadboard which can be mounted to the railing.
+	% \item Mount this circuit to the railing, and connect it to the oscilloscope.
+	% Turn on your laser again, and adjust the knobs on the optics mount until the laser points directly on the photodiode.
+	% You should be able to see a signal on the photodiode now!
+	\item Like with the LED, we need to find the best high value and low values to get the photodiode signal to be a nice sine wave.  (This happens because if the voltage is below a certain value, the laser won't produce any light.)
+	Now that the laser is aligned, you can take your high value up to 5 V, but don't go any higher!
+	What are the best low and high values to use to get a good signal?
+	
+	\answergrid{5cm}
+	\item Try modulating the laser at higher frequencies.  How high can you go before the signal starts to change?  Is the interference better or worse than it was with the LED?
+	
+	\answergrid{5cm}
+	\item Try changing the resistor on the photodiode -- what is the ideal value for the circuit if we want to detect high frequency waves?
+	
+	\answergrid{5cm}
+	\item What is the period of the highest frequency at which you can modulate the laser and receive a signal?
+	
+		\answergrid{5cm}
+	\item Roughly how far does light travel in this period?  (Note: the speed of light is approximately 3 $\times 10^8$ m/s.)
+	
+		\answergrid{5cm}
+	\item Discuss what this means for measuring the speed of light... what would you need to do to get an accurate measurement?
+	
+		\fillanswergrid
+\end{enumerate}
+
+
+
+	% \fillgrid
+	% \fillgrid
+
+
+\end{document}

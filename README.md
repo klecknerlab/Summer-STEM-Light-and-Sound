@@ -1,2 +1,8 @@
 # Summer-STEM-Light-and-Sound
-Materials for a week-long high school summer STEM seminar which measures the speed and wavelength of light and sound with commonly available materials.
+
+Would you believe that you can measure the speed of light by modulating a $2 laser diode?  Or that you could measure the wavelength of light using a regular ruler as a diffraction grating?  ...and that this would be accessible to high school students?  Surprisingly, all of this is possible, and apart from a function generator and oscilloscope, all of the required equipment can be purchased relatively cheaply, < $300 per group.  Moreover, some of the more expensive bits (like a few laser mirror mounts) are likely already available in a university physics lab.
+
+This repository contains all the materials required to run a week-long high school summer STEM seminar which measures the speed and wavelength of both light and sound.  They also learn about units, scientific notation, and other essential measurement topics.  The materials provided here include both daily worksheets and (very short) powerpoint slides, as well as [daily notes](daily_notes.md) on administering the course, as well as information on [organization](organization.md) and [construction](construction.md) of the required components.  This includes details on low cost construction methods for various items used for the experiments.
+
+We developed this course as a summer seminar for HS students, offered through the [CalTeach program at UC Merced](https://calteach.ucmerced.edu/).  The development and implementation of this course was funded by [NSF Career Award #2046261](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2046261&HistoricalAwards=false), and supported by both the UC Merced [Physics Department](https://physics.ucmerced.edu/) and Instructional Labs.
+

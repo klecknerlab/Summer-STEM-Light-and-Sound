@@ -1,0 +1,97 @@
+\documentclass[12pt, letterpaper]{article}
+\input{../preamble.tex}
+
+\begin{document}
+\header{Day 2: Speed of Sound}
+\normalsize
+
+\section{Part 1}
+
+Yesterday you should have finished the day connecting the ultrasound receiver / transmitter.
+If you didn't get that far, go back to the last part of the day 1 worksheet and start at the `Ultrasound' section.
+
+\begin{enumerate}
+	\item If you move the transmitter near the receiver, you should see that you can transmit a signal!  Try attaching both to the metal rail, and move them around.  What happens to the signal?
+
+	\answergrid{3cm}
+	\item With both screwed down, switch the black and red alligator clips on the transmitter.  What happens to the signal on the receiver?
+
+	\answergrid{3cm}
+	\item Now try changing the frequency of the transmitter -- what happens to the signal on the receiver?  How high or low can you go and still get a decent signal?  Which is the `best' frequency to use?
+
+	\answergrid{3cm}
+\end{enumerate}
+
+Since the transmitter is sending sound to the receiver, we should get a delay based on how long it takes sound to move between them.
+We can use this to measure the speed of sound!
+
+To do so, we don't want a continuous signal, but rather a `burst'.
+We can set this up with the `burst' button on the function generator.
+In the burst menu set up the following options on the first page: \textbf{Period:} 10 ms, \textbf{NCycle}, \textbf{Source:} internal.
+On the second page: \textbf{Cycles:} 10.
+
+You should be able to see that the signal on the oscilloscope only oscillates for 10 periods at a time now.
+If it doesn't work ask for help (the burst menu is super confusing).
+
+Set the receiver and transmitter about 30 cm apart -- you should now be able to adjust the oscilloscope settings to see both the burst and the \textbf{delayed response} of the receiver.
+If you move the receiver relative to the transmitter you should see the receiver signal shift.
+
+\begin{enumerate}
+	\item To measure delay caused by sound we need to measure the time interval between the transmitter signal and the receiver response.
+	But... both signals have some width in time, so how would we determine where to start and stop our `timer'?
+	Sketch a graph of the signals and mark what you will use as the reference points.
+	Ask the professor or assistants to look at your answer before moving on!
+
+	\fillanswergrid
+	\item Measure the delay (using the method you described above) for a bunch of different separations between the transmitter and receiver.
+	Make a chart with at 5--10 values of distance (separation between receiver and transmitter) and measured delay.
+
+	\fillanswergrid
+\end{enumerate}
+
+
+% \section{If you finish early...}
+% \begin{itemize}
+% 	\item Try changing the number of `cycles' in the burst, and see how this affects the signal.  Could you make a better measurement of the delay?  (And if so, why?)
+% 	\item Put the function generator in continuous (i.e.~not burst) mode and then look at the transmitted/received signals in X-Y mode.  Discuss if you could use this to measure delays and/or the speed of sound.
+% 	\item Spend some time exploring the different functions of the oscilloscope and function generator.  You can make some cool plots with X-Y mode and signals of different frequencies.
+% \end{itemize}
+
+\section{Part 2}
+
+We're going to make a spreadsheet to hold the data you just took, and fit a line to it.
+To get started, let's watch a YouTube tutorial on GoogleDocs:\\ \href{https://www.youtube.com/watch?v=fHxfoQsc8hc}{www.youtube.com/watch?v=fHxfoQsc8hc}
+
+One thing this video doesn't mention: you can include your column headings in the spreadsheet, and if you do so your axes labels will be automatically included.
+In your case, cell A1 should be `delay (ms)', and B1 should be `distance (cm)'.
+The data then goes below these headings, and you select the whole thing (include headings) when you make a graph.
+
+\begin{enumerate}
+	\item Make a GoogleDocs spreadsheet and fill in your data.
+	\item Make a plot of this data and fit this using a trendline.  
+	(Note: to get a good fit, you may need to exclude some of the points: consult with the professor or assistants on your data before moving on!)
+	\item Using your fit, you should now be able to measure the speed of sound!  What is it in therms of: (a) cm/ms, (b) m/s, and (c) mi/hr?
+	
+	\answergrid{5cm}
+\end{enumerate}
+
+\section{Part 3}
+Rather than use a `burst' signal, we can also use a continuous signal and measure the wavelength!
+As the professor mentioned (briefly) on the first day, if you have the period ($T$) or frequency ($f$) and wavelength ($\lambda$) of a moving wave, you can compute the velocity of the wave with:
+\begin{align}
+	v &= \frac{\lambda}{T} = \lambda f
+\end{align}
+Discuss as a group how to measure the wavelength using the `X-Y' mode.
+Then try it!
+
+If you finish early... ask the professor or assistants about using the `wavefit' program on the laptops to improve your phase measurements, and get a more accurate result for the wavelength.
+
+\fillgrid
+
+\clearpage
+
+\fillgrid
+
+\end{document}
+
+
